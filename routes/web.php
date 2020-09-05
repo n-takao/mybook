@@ -15,5 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::group(['prefix' => 'admin'], function(){
-    Route::get('book/create', 'Admin\Bookcontroller@add');
+Route::get('book/create', 'Admin\Bookcontroller@add')->middleware('auth');
+Route::post('book/create', 'Admin\Bookcontroller@create')->middleware('auth');  
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

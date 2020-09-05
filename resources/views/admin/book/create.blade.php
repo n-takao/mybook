@@ -7,6 +7,54 @@
         <title>reader Book</title>
     </head>
     <body>
-        <h1>読本の紹介作成をする画面</h1>
+        @extends('layouts.front')
+        
+        @section('title', '本の紹介作成ページ')
+        
+        @section('content')
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <h2 class="logo">読本の新規紹介作成</h2>
+                        <p>あなたにお勧めしたい一冊</p>
+                        <form actio="{{ action('Admin\Bookcontroller@create') }}" method="post" enctype="multipart/form-data">
+                            @if(count($errors) > 0)
+                            <ul>
+                                @foreach($errors->all() as $e)
+                                <li>{{ $e }}</li>
+                                @endforeach
+                            </ul>
+                            @endif
+                            <div class="form-group row">
+                                <lavel class="col-md-2">本の名前と著者</lavel>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                                </div>
+                            </div>
+                             <div class="form-group row">
+                                <lavel class="col-md-2">画像</lavel>
+                                <div class="col-md-10">
+                                    <input type="file" class="form-control-file" name="image">
+                                </div>
+                            </div>
+                                
+                            <div class="form-group row">
+                                <lavel class="col-md-2">本の思い出</lavel>
+                                <div class="col-md-10">
+                                    <textra class="form-control" name="body" rows="20">{{ old('body') }}</textra>
+                                </div>
+                            </div>
+                            {{ csrf_field() }}
+                            <input type="submit" class="btn btn-primary" value="更新"＞
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
     </body>
 </html>
+                                
+                                    
+                                 
+                       
