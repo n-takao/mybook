@@ -46,7 +46,7 @@
                                     </form>
                                 </div>
                             </li>
-@endguest
+                @endguest
             </ul>
                 <main class="py-4">
                     @yield('content')
