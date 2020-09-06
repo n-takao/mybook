@@ -8,7 +8,7 @@ class TestController extends Controller
 {
     public function add()
     {
-        $deta = ['mag'=>'これはコントローラーから渡されたメッセージです。'];
+        $deta = ['msg'=>'これはコントローラーから渡されたメッセージです。'];
     return view('admin.book.test',$data);
     }
 }
