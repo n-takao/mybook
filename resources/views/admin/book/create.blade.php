@@ -27,24 +27,23 @@
                             </ul>
                             @endif
                             <div class="form-group row">
-                                <lavel class="col-md-2">本の名前と著者</lavel>
+                                <label class="col-md-2">本の名前と著者</label>
                                 <div class="col-md-10">
                                     <input type="text" class="form-control" name="title" value="{{ old('title') }}">
                                 </div>
                             </div>
                              <div class="form-group row">
-                                <lavel class="col-md-2">画像</lavel>
+                                <label class="col-md-2">画像</label>
                                 <div class="col-md-10">
                                     <input type="file" class="form-control-file" name="image">
                                 </div>
                             </div>
-                                
                             <div class="form-group row">
-                                <lavel class="col-md-2">本の思い出</lavel>
-                                <div class="col-md-10">
-                                    <textra class="form-control" name="body" rows="20">{{ old('body') }}</textra>
-                                </div>
-                            </div>
+                             <label class="col-md-2">本の思い出</label>
+                             　<div class="col-md-10">
+                            　　　<textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
+                             　</div>
+                            </div>   
                             {{ csrf_field() }}
                             <input type="submit" class="btn btn-primary" value="更新"＞
                         </form>

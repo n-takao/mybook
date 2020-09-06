@@ -18,7 +18,7 @@ Route::group(['prefix' => 'admin'], function(){
 Route::get('book/create', 'Admin\Bookcontroller@add')->middleware('auth');
 Route::post('book/create', 'Admin\Bookcontroller@create')->middleware('auth');
 
-Route::get('book/test', 'Admin\TestController@add');
+Route::get('book/test', 'TestController@add');
 });
 Auth::routes();
 
