@@ -18,7 +18,7 @@
                     <div class="col-md-8 mx-auto">
                         <h2 class="logo">読本の新規紹介作成</h2>
                         <p>あなたにお勧めしたい一冊</p>
-                        <form actio="{{ action('Admin\Bookcontroller@create') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ action('Admin\Bookcontroller@create') }}" method="post" enctype="multipart/form-data">
                             @if(count($errors) > 0)
                             <ul>
                                 @foreach($errors->all() as $e)
@@ -45,7 +45,7 @@
                              　</div>
                             </div>   
                             {{ csrf_field() }}
-                            <input type="submit" class="btn btn-primary" value="更新"＞
+                            <input type="submit" class="btn btn-primary" value="更新">
                         </form>
                     </div>
                 </div>

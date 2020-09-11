@@ -25,6 +25,7 @@
         <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
         </head>
         <body>
+         
             <ul class="navbar-nav ml-auto">
                 @guest
               <li><a class="nav-link" href="{{ route('login') }}">{{ __('login') }}</a></li>
@@ -51,7 +52,7 @@
                 <main class="py-4">
                     @yield('content')
                 </main>
-            </div>
+            
         </body>
 </html>
             
